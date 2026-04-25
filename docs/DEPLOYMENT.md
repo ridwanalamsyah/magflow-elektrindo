@@ -68,4 +68,4 @@ Configured in `vercel.json`:
 - `/index.html` → revalidate immediately
 - global security headers → frame/content/referrer/permissions policies
 
-Because assets are cached aggressively, update filenames when replacing assets that must refresh immediately. Stable SEO files such as `assets/logo.png` and `assets/og-cover.jpg` may require cache invalidation or a filename/version update if changed.
+Because generated media assets are cached aggressively, update filenames when replacing images or documents that must refresh immediately. Stable CSS and JavaScript files under `assets/css/` and `assets/js/` are configured to revalidate so returning visitors receive code updates. Stable SEO files such as `assets/logo.png` and `assets/og-cover.jpg` may require cache invalidation or a filename/version update if changed.

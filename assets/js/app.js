@@ -44,8 +44,9 @@ function setSelectByValue(id, value){
 }
 function formatRp(n) {
   var num = isFinite(n) ? Math.round(n) : 0;
-  if(num >= 1e9) return 'Rp ' + (num/1e9).toFixed(1) + ' M';
-  if(num >= 1e6) return 'Rp ' + (num/1e6).toFixed(1) + ' jt';
+  var abs = Math.abs(num);
+  if(abs >= 1e9) return 'Rp ' + (num/1e9).toFixed(1) + ' M';
+  if(abs >= 1e6) return 'Rp ' + (num/1e6).toFixed(1) + ' jt';
   return 'Rp ' + num.toLocaleString('id-ID');
 }
 
@@ -1374,36 +1375,6 @@ function sendWA(){
   btn.addEventListener('click', function(){
     window.scrollTo({top: 0, behavior: 'smooth'});
   });
-})();
-
-/* ---- Inline script block 7 ---- */
-/* ── Counter Animasi Stats ── */
-(function(){
-  function animateCounter(el, target, suffix, duration){
-    var start=0, startTime=null;
-    function step(ts){
-      if(!startTime) startTime=ts;
-      var progress=Math.min((ts-startTime)/duration,1);
-      var ease=1-Math.pow(1-progress,3);
-      el.innerHTML=Math.floor(ease*target)+suffix;
-      if(progress<1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
-  var countersDone=false;
-  var statsEl=document.querySelector('.hero-stats');
-  if(!statsEl) return;
-  var obs=new IntersectionObserver(function(entries){
-    if(countersDone||!entries[0].isIntersecting) return;
-    countersDone=true;
-    document.querySelectorAll('.hs-n[data-count], .ss-n[data-count]').forEach(function(el){
-      var target=parseInt(el.getAttribute('data-count'),10);
-      var em=el.querySelector('em');
-      var suffix=em?'<em>'+em.textContent+'</em>':'';
-      animateCounter(el,target,suffix,1200);
-    });
-  },{threshold:0.5});
-  obs.observe(statsEl);
 })();
 
 /* ── Progress Bar Scroll ── */

@@ -1024,7 +1024,7 @@ function setLang(l){
  document.querySelectorAll('.lang-sw button').forEach((b,i)=>b.classList.toggle('on',i===(l==='id'?0:1)));
  document.querySelectorAll('[data-i]').forEach(el=>{
   const k=el.getAttribute('data-i');
-  if(T[l]&&T[l][k]!==undefined){var v=T[l][k].replace(/\\n/g,'<br>');if(el.tagName==='OPTION'||el.tagName==='BUTTON'||el.tagName==='SPAN'||el.tagName==='LABEL')el.textContent=T[l][k];else el.innerHTML=v;}
+  if(T[l]&&T[l][k]!==undefined){var v=T[l][k].replace(/\n/g,'<br>');if(el.tagName==='OPTION'||el.tagName==='BUTTON'||el.tagName==='SPAN'||el.tagName==='LABEL')el.textContent=T[l][k];else el.innerHTML=v;}
  });
  document.querySelectorAll('[data-ph]').forEach(el=>{
   const k=el.getAttribute('data-ph');

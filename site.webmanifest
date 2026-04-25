@@ -1,0 +1,21 @@
+{
+  "name": "PT. Magflow Elektrindo Persada",
+  "short_name": "Magflow",
+  "description": "Company profile PT. Magflow Elektrindo Persada untuk layanan kelistrikan, testing commissioning, dan Solar PV.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B2D6B",
+  "theme_color": "#0B2D6B",
+  "icons": [
+    {
+      "src": "/assets/logo.png",
+      "sizes": "any",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/generated/img-70a520326e7b4b69.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

@@ -195,7 +195,7 @@ function toggleAdv(){
 function resetKalkulator(){
   if(calcEl('plts_kwh')) calcEl('plts_kwh').value = '60';
   if(calcEl('plts_tagihan')) calcEl('plts_tagihan').value = '';
-  if(calcEl('plts_luas')) calcEl('plts_luas').value = '';
+  if(calcEl('plts_luas')) calcEl('plts_luas').value = '80';
   if(calcEl('plts_eff')) calcEl('plts_eff').value = '85';
   if(calcEl('plts_buffer')) calcEl('plts_buffer').value = '25';
   if(calcEl('plts_hargakwp')) calcEl('plts_hargakwp').value = '15';
